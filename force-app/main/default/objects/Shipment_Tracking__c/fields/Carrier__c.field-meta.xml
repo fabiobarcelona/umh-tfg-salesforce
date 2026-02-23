@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carrier__c</fullName>
+    <description>Transportista encargado del envío.</description>
+    <label>Carrier</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SEUR</fullName>
+                <default>false</default>
+                <label>SEUR</label>
+            </value>
+            <value>
+                <fullName>MRW</fullName>
+                <default>false</default>
+                <label>MRW</label>
+            </value>
+            <value>
+                <fullName>Correos</fullName>
+                <default>false</default>
+                <label>Correos</label>
+            </value>
+            <value>
+                <fullName>DHL</fullName>
+                <default>false</default>
+                <label>DHL</label>
+            </value>
+            <value>
+                <fullName>UPS</fullName>
+                <default>false</default>
+                <label>UPS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

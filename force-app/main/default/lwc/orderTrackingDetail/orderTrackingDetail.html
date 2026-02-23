@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Estado del Envío" icon-name="standard:orders">
+        <div class="slds-card__body slds-card__body_inner">
+
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Actualizando estado..." size="small"></lightning-spinner>
+            </template>
+
+            <template if:true={hasTracking}>
+                <dl class="slds-dl_horizontal">
+                    <dt class="slds-dl_horizontal__label slds-text-color_weak">Transportista:</dt>
+                    <dd class="slds-dl_horizontal__detail">{trackingData.Carrier__c}</dd>
+
+                    <dt class="slds-dl_horizontal__label slds-text-color_weak">Número de seguimiento:</dt>
+                    <dd class="slds-dl_horizontal__detail">
+                        <strong>{trackingData.Tracking_Number__c}</strong>
+                    </dd>
+
+                    <dt class="slds-dl_horizontal__label slds-text-color_weak">Estado:</dt>
+                    <dd class="slds-dl_horizontal__detail">
+                        <lightning-badge label={trackingData.Status__c}></lightning-badge>
+                    </dd>
+
+                    <dt class="slds-dl_horizontal__label slds-text-color_weak">Entrega estimada:</dt>
+                    <dd class="slds-dl_horizontal__detail">{trackingData.Estimated_Delivery__c}</dd>
+                </dl>
+
+                <template if:true={isDelivered}>
+                    <div class="slds-notify slds-notify_alert slds-theme_success slds-m-top_small" role="alert">
+                        <span>Pedido entregado correctamente.</span>
+                    </div>
+                </template>
+            </template>
+
+            <template if:false={hasTracking}>
+                <p class="slds-text-color_weak">
+                    No hay información de envío disponible para este pedido todavía.
+                </p>
+            </template>
+
+            <template if:true={error}>
+                <p class="slds-text-color_error">Error al obtener el estado del envío.</p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

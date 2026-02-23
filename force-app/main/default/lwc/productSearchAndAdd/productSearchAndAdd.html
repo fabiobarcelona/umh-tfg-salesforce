@@ -1,0 +1,110 @@
+<template>
+    <lightning-card title="Añadir Productos" icon-name="standard:product">
+        <div class="slds-card__body slds-card__body_inner">
+
+            <!-- Búsqueda -->
+            <div class="slds-form-element slds-m-bottom_small">
+                <lightning-input
+                    type="search"
+                    label="Buscar producto"
+                    placeholder="Nombre o código de producto (mín. 3 caracteres)"
+                    value={searchKey}
+                    onchange={handleSearchKeyChange}>
+                </lightning-input>
+            </div>
+
+            <!-- Spinner -->
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Cargando..." size="small"></lightning-spinner>
+            </template>
+
+            <!-- Resultados de búsqueda -->
+            <template if:true={hasProducts}>
+                <h3 class="slds-text-heading_small slds-m-bottom_x-small">Resultados</h3>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-m-bottom_medium">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Código</th>
+                            <th>Familia</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={products} for:item="product">
+                            <tr key={product.Id}>
+                                <td>{product.Name}</td>
+                                <td>{product.ProductCode}</td>
+                                <td>{product.Family}</td>
+                                <td>
+                                    <lightning-button
+                                        label="Añadir"
+                                        variant="brand-outline"
+                                        data-id={product.Id}
+                                        onclick={handleSelectProduct}>
+                                    </lightning-button>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </template>
+
+            <!-- Productos seleccionados -->
+            <template if:true={hasSelectedProducts}>
+                <h3 class="slds-text-heading_small slds-m-bottom_x-small">Productos seleccionados</h3>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-m-bottom_medium">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Descuento (%)</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={selectedProducts} for:item="sel">
+                            <tr key={sel.Id}>
+                                <td>{sel.Name}</td>
+                                <td>
+                                    <lightning-input
+                                        type="number"
+                                        min="1"
+                                        value={sel.quantity}
+                                        data-id={sel.Id}
+                                        onchange={handleQuantityChange}>
+                                    </lightning-input>
+                                </td>
+                                <td>
+                                    <lightning-input
+                                        type="number"
+                                        min="0"
+                                        max="100"
+                                        value={sel.discount}
+                                        data-id={sel.Id}
+                                        onchange={handleDiscountChange}>
+                                    </lightning-input>
+                                </td>
+                                <td>
+                                    <lightning-button-icon
+                                        icon-name="utility:delete"
+                                        variant="bare-inverse"
+                                        data-id={sel.Id}
+                                        onclick={handleRemoveProduct}
+                                        alternative-text="Eliminar">
+                                    </lightning-button-icon>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+                <lightning-button
+                    label="Añadir a la Oportunidad"
+                    variant="brand"
+                    onclick={handleAddToOpportunity}>
+                </lightning-button>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

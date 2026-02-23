@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>InventoryUpdateBatch</members>
+        <members>InventoryUpdateBatchTest</members>
+        <members>OpportunityTimelineController</members>
+        <members>OpportunityTimelineControllerTest</members>
+        <members>OpportunityTriggerHandler</members>
+        <members>OpportunityTriggerHandlerTest</members>
+        <members>OrderTrackingController</members>
+        <members>OrderTrackingControllerTest</members>
+        <members>ProductSearchController</members>
+        <members>ProductSearchControllerTest</members>
+        <members>ShipmentTrackingService</members>
+        <members>ShipmentTrackingServiceTest</members>
+        <members>TestDataFactory</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ITSolutionsTestSuite</members>
+        <name>ApexTestSuite</name>
+    </types>
+    <types>
+        <members>OpportunityTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Opportunity.Discount_Approval</members>
+        <name>ApprovalProcess</name>
+    </types>
+    <types>
+        <members>OrderItem.Order_Product_Compact_Layout</members>
+        <name>CompactLayout</name>
+    </types>
+    <types>
+        <members>standard__LightningSales</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Account.Customer_Type__c</members>
+        <members>Account.Preferred_Payment_Method__c</members>
+        <members>Case.Related_Order__c</members>
+        <members>Case.Resolution_Time__c</members>
+        <members>Inventory__c.Available_Stock__c</members>
+        <members>Inventory__c.Last_Updated__c</members>
+        <members>Inventory__c.Product__c</members>
+        <members>Inventory__c.Reorder_Point__c</members>
+        <members>Inventory__c.Reserved_Stock__c</members>
+        <members>Lead.Lead_Source_Detail__c</members>
+        <members>Lead.ProductInterest__c</members>
+        <members>Opportunity.Approval_Status__c</members>
+        <members>Opportunity.Discount_Percentage__c</members>
+        <members>Opportunity.Requires_Approval__c</members>
+        <members>Order.Payment_Status__c</members>
+        <members>Order.Shipping_Status__c</members>
+        <members>Shipment_Tracking__c.Carrier__c</members>
+        <members>Shipment_Tracking__c.Estimated_Delivery__c</members>
+        <members>Shipment_Tracking__c.Last_API_Update__c</members>
+        <members>Shipment_Tracking__c.Order__c</members>
+        <members>Shipment_Tracking__c.Status__c</members>
+        <members>Shipment_Tracking__c.Tracking_Number__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Inventory__c</members>
+        <members>Shipment_Tracking__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Inventory__c</members>
+        <members>Shipment_Tracking__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>EmailToCase</members>
+        <name>EmailServicesFunction</name>
+    </types>
+    <types>
+        <members>NoAuthCredential</members>
+        <name>ExternalCredential</name>
+    </types>
+    <types>
+        <members>Assign_Lead_to_Owner</members>
+        <members>Discount_Approval_Process</members>
+        <members>Shipment_Notification</members>
+        <members>Update_Inventory_on_Order</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Account-Account %28Marketing%29 Layout</members>
+        <members>Account-Account %28Sales%29 Layout</members>
+        <members>Account-Account %28Support%29 Layout</members>
+        <members>Account-Account Layout</members>
+        <members>Inventory__c-Inventory Layout</members>
+        <members>Opportunity-Opportunity %28Marketing%29 Layout</members>
+        <members>Opportunity-Opportunity %28Sales%29 Layout</members>
+        <members>Opportunity-Opportunity %28Support%29 Layout</members>
+        <members>Opportunity-Opportunity Layout</members>
+        <members>OpportunityLineItem-Opportunity Product Layout</members>
+        <members>Order-Order Layout</members>
+        <members>OrderItem-Order Product Layout</members>
+        <members>Pricebook2-Price Book Layout</members>
+        <members>PricebookEntry-Price Book Entry Layout</members>
+        <members>Product2-Product Layout</members>
+        <members>Quote-Quote Layout</members>
+        <members>QuoteLineItem-Quote Line Item Layout</members>
+        <members>Shipment_Tracking__c-Shipment Tracking Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>opportunityTimeline</members>
+        <members>orderTrackingDetail</members>
+        <members>productSearchAndAdd</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Inventory__c.All</members>
+        <members>Shipment_Tracking__c.All</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>TrackingProvider</members>
+        <name>NamedCredential</name>
+    </types>
+    <types>
+        <members>IT_Solutions_Admin</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Billing_Queue</members>
+        <members>Hardware_Support_Queue</members>
+        <members>Software_Support_Queue</members>
+        <name>Queue</name>
+    </types>
+    <types>
+        <members>TrackingProviderAPI</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <types>
+        <members>Inventory__c.Available_Stock_Cannot_Be_Negative</members>
+        <name>ValidationRule</name>
+    </types>
+    <version>66.0</version>
+</Package>

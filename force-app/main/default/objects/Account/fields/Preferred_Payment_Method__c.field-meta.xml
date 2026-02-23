@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Payment_Method__c</fullName>
+    <description>Método de pago preferido por el cliente para sus pedidos.</description>
+    <label>Preferred Payment Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Transferencia bancaria</fullName>
+                <default>false</default>
+                <label>Transferencia bancaria</label>
+            </value>
+            <value>
+                <fullName>Tarjeta de crédito</fullName>
+                <default>false</default>
+                <label>Tarjeta de crédito</label>
+            </value>
+            <value>
+                <fullName>Domiciliación bancaria</fullName>
+                <default>false</default>
+                <label>Domiciliación bancaria</label>
+            </value>
+            <value>
+                <fullName>Contado</fullName>
+                <default>false</default>
+                <label>Contado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Available_Stock_Cannot_Be_Negative</fullName>
+    <active>true</active>
+    <description>Impide que el stock disponible sea un valor negativo.</description>
+    <errorConditionFormula>Available_Stock__c &lt; 0</errorConditionFormula>
+    <errorDisplayField>Available_Stock__c</errorDisplayField>
+    <errorMessage>El stock disponible no puede ser negativo.</errorMessage>
+</ValidationRule>

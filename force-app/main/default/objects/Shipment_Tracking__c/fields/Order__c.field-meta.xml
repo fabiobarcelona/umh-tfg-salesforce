@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order__c</fullName>
+    <description>Pedido asociado a este registro de seguimiento de envío.</description>
+    <label>Order</label>
+    <referenceTo>Order</referenceTo>
+    <relationshipLabel>Shipment Trackings</relationshipLabel>
+    <relationshipName>Shipment_Trackings</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

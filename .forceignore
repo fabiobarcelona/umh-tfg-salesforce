@@ -1,0 +1,7 @@
+# .forceignore file
+# Ignore files that should not be deployed
+
+.DS_Store
+.git
+.gitignore
+node_modules

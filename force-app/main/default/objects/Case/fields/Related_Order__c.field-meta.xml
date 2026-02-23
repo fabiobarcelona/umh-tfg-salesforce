@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Order__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Pedido relacionado con el caso de soporte (útil para incidencias de envío o devoluciones).</description>
+    <label>Related Order</label>
+    <referenceTo>Order</referenceTo>
+    <relationshipLabel>Support Cases</relationshipLabel>
+    <relationshipName>Support_Cases</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
