@@ -67,13 +67,28 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>IT_Solutions_Customer_Portal</members>
+        <name>CustomSite</name>
+    </types>
+    <types>
         <members>Inventory__c</members>
         <members>Shipment_Tracking__c</members>
         <name>CustomTab</name>
     </types>
     <types>
+        <members>ITSolutions_Dashboards/</members>
+        <members>ITSolutions_Dashboards/Dashboard_Soporte</members>
+        <members>ITSolutions_Dashboards/Dashboard_Ventas</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
         <members>EmailToCase</members>
         <name>EmailServicesFunction</name>
+    </types>
+    <types>
+        <members>Clientes</members>
+        <members>IT_Solutions_Customer_Portal1</members>
+        <name>ExperienceBundle</name>
     </types>
     <types>
         <members>NoAuthCredential</members>
@@ -123,6 +138,15 @@
         <name>NamedCredential</name>
     </types>
     <types>
+        <members>Clientes</members>
+        <members>IT Solutions Customer Portal</members>
+        <name>Network</name>
+    </types>
+    <types>
+        <members>cbIT_Solutions_Customer_Portal</members>
+        <name>NetworkBranding</name>
+    </types>
+    <types>
         <members>IT_Solutions_Admin</members>
         <name>PermissionSet</name>
     </types>
@@ -135,6 +159,25 @@
     <types>
         <members>TrackingProviderAPI</members>
         <name>RemoteSiteSetting</name>
+    </types>
+    <types>
+        <members>ITSolutions_Inventario/</members>
+        <members>ITSolutions_Inventario/Productos_Bajo_Reorder_Point</members>
+        <members>ITSolutions_Inventario/Stock_Disponible_vs_Reservado</members>
+        <members>ITSolutions_Soporte/</members>
+        <members>ITSolutions_Soporte/Casos_Abiertos_por_Cola</members>
+        <members>ITSolutions_Soporte/Casos_por_Tipo_y_Estado</members>
+        <members>ITSolutions_Soporte/Tiempo_Medio_Resolucion</members>
+        <members>ITSolutions_Ventas/</members>
+        <members>ITSolutions_Ventas/Descuentos_Pendientes_Aprobacion</members>
+        <members>ITSolutions_Ventas/Oportunidades_Ganadas_Mes</members>
+        <members>ITSolutions_Ventas/Oportunidades_Sin_Actividad</members>
+        <members>ITSolutions_Ventas/Pipeline_por_Etapa</members>
+        <name>Report</name>
+    </types>
+    <types>
+        <members>IT_Solutions_Customer_Portal1</members>
+        <name>SiteDotCom</name>
     </types>
     <types>
         <members>Inventory__c.Available_Stock_Cannot_Be_Negative</members>
