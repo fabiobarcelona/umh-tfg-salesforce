@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Inventory__c.Product__c</field>
+    </columns>
+    <columns>
+        <field>Inventory__c.Available_Stock__c</field>
+    </columns>
+    <columns>
+        <field>Inventory__c.Reserved_Stock__c</field>
+    </columns>
+    <columns>
+        <field>Inventory__c.Reorder_Point__c</field>
+    </columns>
+    <columns>
+        <field>Inventory__c.Last_Updated__c</field>
+    </columns>
+    <description>Productos cuyo stock disponible está por debajo del punto de reposición — requieren reaprovisionamiento</description>
+    <filter>
+        <booleanFilter>1</booleanFilter>
+        <criteriaItems>
+            <column>Inventory__c.Available_Stock__c</column>
+            <columnToColumn>true</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>lessThan</operator>
+            <value>Inventory__c.Reorder_Point__c</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Productos Bajo Punto de Reposición</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Inventory__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Inventory__c.Last_Updated__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
