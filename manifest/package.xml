@@ -86,7 +86,6 @@
         <name>EmailServicesFunction</name>
     </types>
     <types>
-        <members>Clientes</members>
         <members>IT_Solutions_Customer_Portal1</members>
         <name>ExperienceBundle</name>
     </types>
@@ -138,7 +137,6 @@
         <name>NamedCredential</name>
     </types>
     <types>
-        <members>Clientes</members>
         <members>IT Solutions Customer Portal</members>
         <name>Network</name>
     </types>
