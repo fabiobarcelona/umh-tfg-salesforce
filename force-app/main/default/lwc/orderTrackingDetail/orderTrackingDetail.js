@@ -1,10 +1,10 @@
-import { LightningElement, api, wire, track } from 'lwc';
+import { LightningElement, api, wire } from 'lwc';
 import getTrackingInfo from '@salesforce/apex/OrderTrackingController.getTrackingInfo';
 
 export default class OrderTrackingDetail extends LightningElement {
     @api recordId; // ID del Order
-    @track trackingData;
-    @track error;
+    trackingData;
+    error;
     isLoading = false;
 
     @wire(getTrackingInfo, { orderId: '$recordId' })

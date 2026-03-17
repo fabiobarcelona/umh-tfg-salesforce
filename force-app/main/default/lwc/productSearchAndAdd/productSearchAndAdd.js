@@ -2,13 +2,12 @@ import { LightningElement, api, track } from 'lwc';
 import searchProducts from '@salesforce/apex/ProductSearchController.searchProducts';
 import addProductsToOpportunity from '@salesforce/apex/ProductSearchController.addProductsToOpportunity';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import { refreshApex } from '@salesforce/apex';
 
 export default class ProductSearchAndAdd extends LightningElement {
     @api recordId; // ID de la Opportunity
-    @track searchKey = '';
-    @track products = [];
-    @track selectedProducts = [];
+    searchKey = '';
+    products = [];
+    selectedProducts = [];
     isLoading = false;
 
     get hasProducts() {
@@ -89,18 +88,18 @@ export default class ProductSearchAndAdd extends LightningElement {
             opportunityId: this.recordId,
             products: productsToAdd
         })
-        .then(() => {
-            this.showToast('Éxito', 'Productos añadidos a la oportunidad', 'success');
-            this.selectedProducts = [];
-            this.products = [];
-            this.searchKey = '';
-            this.isLoading = false;
-            this.dispatchEvent(new CustomEvent('productsadded'));
-        })
-        .catch(error => {
-            this.showToast('Error', error.body.message, 'error');
-            this.isLoading = false;
-        });
+            .then(() => {
+                this.showToast('Éxito', 'Productos añadidos a la oportunidad', 'success');
+                this.selectedProducts = [];
+                this.products = [];
+                this.searchKey = '';
+                this.isLoading = false;
+                this.dispatchEvent(new CustomEvent('productsadded'));
+            })
+            .catch(error => {
+                this.showToast('Error', error.body.message, 'error');
+                this.isLoading = false;
+            });
     }
 
     showToast(title, message, variant) {
