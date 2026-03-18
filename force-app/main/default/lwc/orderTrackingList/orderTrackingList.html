@@ -1,0 +1,84 @@
+<template>
+    <lightning-card title="Mis Pedidos" icon-name="standard:orders">
+        <div class="slds-card__body slds-card__body_inner">
+
+            <!-- Vista de lista -->
+            <template if:true={showList}>
+                <template if:true={hasOrders}>
+                    <div class="slds-grid slds-wrap slds-gutters_small">
+                        <template for:each={orders} for:item="order">
+                            <div key={order.Id}
+                                class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-m-bottom_small">
+                                <div class="order-card slds-box slds-theme_default slds-p-around_medium"
+                                    data-id={order.Id} onclick={handleOrderClick}>
+                                    <div class="slds-grid slds-grid_vertical">
+                                        <div class="slds-grid slds-grid_align-spread slds-m-bottom_x-small">
+                                            <h3 class="slds-text-heading_small">
+                                                <lightning-icon icon-name="standard:orders" size="x-small"
+                                                    class="slds-m-right_xx-small"></lightning-icon>
+                                                Pedido #{order.OrderNumber}
+                                            </h3>
+                                            <span class={order.statusClass}>{order.Status}</span>
+                                        </div>
+
+                                        <div class="slds-m-bottom_xx-small slds-text-body_small slds-text-color_weak">
+                                            <lightning-icon icon-name="utility:event" size="xx-small"
+                                                class="slds-m-right_xx-small"></lightning-icon>
+                                            {order.formattedDate}
+                                        </div>
+
+                                        <div class="slds-m-bottom_xx-small slds-text-body_regular">
+                                            <strong>{order.formattedAmount}</strong>
+                                        </div>
+
+                                        <template if:true={order.trackingStatus}>
+                                            <div class="slds-m-top_xx-small">
+                                                <lightning-icon icon-name="utility:truck" size="xx-small"
+                                                    class="slds-m-right_xx-small"></lightning-icon>
+                                                <lightning-badge label={order.trackingStatus}></lightning-badge>
+                                            </div>
+                                        </template>
+
+                                        <template if:true={order.Payment_Status__c}>
+                                            <div class="slds-m-top_xx-small">
+                                                <lightning-icon icon-name="utility:money" size="xx-small"
+                                                    class="slds-m-right_xx-small"></lightning-icon>
+                                                <lightning-badge label={order.Payment_Status__c}></lightning-badge>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+
+                <template if:true={error}>
+                    <p class="slds-text-color_error slds-p-around_medium">
+                        Error al cargar los pedidos. Por favor, inténtalo de nuevo más tarde.
+                    </p>
+                </template>
+
+                <template if:true={noOrders}>
+                    <div
+                        class="slds-illustration slds-illustration_small slds-p-around_large slds-align_absolute-center">
+                        <p class="slds-text-body_regular slds-text-color_weak">
+                            No tienes pedidos registrados todavía.
+                        </p>
+                    </div>
+                </template>
+            </template>
+
+            <!-- Vista de detalle -->
+            <template if:true={showDetail}>
+                <div class="slds-m-bottom_small">
+                    <lightning-button label="Volver a Mis Pedidos" icon-name="utility:back" variant="base"
+                        onclick={handleBack}>
+                    </lightning-button>
+                </div>
+                <c-order-tracking-detail record-id={selectedOrderId}></c-order-tracking-detail>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

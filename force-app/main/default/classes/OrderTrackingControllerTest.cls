@@ -38,26 +38,45 @@ private class OrderTrackingControllerTest {
     }
 
     @isTest
-    static void testGetCustomerOrdersWithOrders() {
-        Account acc = [SELECT Id FROM Account WHERE Name = 'Test Account Tracking' LIMIT 1];
+    static void testRefreshTrackingInfo() {
+        Order ord = [SELECT Id FROM Order LIMIT 1];
+
+        Test.setMock(HttpCalloutMock.class, new TrackingMock());
 
         Test.startTest();
-        List<Order> orders = OrderTrackingController.getCustomerOrders(acc.Id);
+        // Crear tracking sin Last_API_Update__c para forzar el refresh
+        TestDataFactory.createShipmentTrackingWithStatus(ord.Id, 'TEST-TRACK-002', 'DHL', 'Pendiente');
+        OrderTrackingController.refreshTrackingInfo(ord.Id);
         Test.stopTest();
 
-        Assert.isFalse(orders.isEmpty(), 'Debería devolver al menos un pedido');
-        Assert.areEqual(1, orders.size(), 'Debería haber exactamente 1 pedido');
+        Shipment_Tracking__c updated = [
+            SELECT Status__c, Last_API_Update__c
+            FROM Shipment_Tracking__c
+            WHERE Order__c = :ord.Id
+            LIMIT 1
+        ];
+        Assert.isNotNull(updated.Last_API_Update__c, 'Last_API_Update__c debería estar actualizado tras el refresh');
     }
 
     @isTest
-    static void testGetCustomerOrdersNoOrders() {
-        Account accNoOrders = TestDataFactory.createAccount('Account Sin Pedidos');
+    static void testRefreshTrackingInfoNoTracking() {
+        Account acc = [SELECT Id FROM Account WHERE Name = 'Test Account Tracking' LIMIT 1];
+        Order ordNoTracking = TestDataFactory.createOrder(acc.Id);
 
         Test.startTest();
-        List<Order> orders = OrderTrackingController.getCustomerOrders(accNoOrders.Id);
+        // No debe lanzar excepción cuando no hay tracking
+        OrderTrackingController.refreshTrackingInfo(ordNoTracking.Id);
+        Test.stopTest();
+    }
+
+    @isTest
+    static void testGetCustomerOrdersAsInternalUser() {
+        // Un usuario interno no tiene ContactId, debe devolver lista vacía
+        Test.startTest();
+        List<Order> orders = OrderTrackingController.getCustomerOrders();
         Test.stopTest();
 
-        Assert.isTrue(orders.isEmpty(), 'No debería devolver pedidos para una cuenta sin pedidos');
+        Assert.isTrue(orders.isEmpty(), 'Un usuario interno sin Contact debe recibir lista vacía');
     }
 
     private class TrackingMock implements HttpCalloutMock {

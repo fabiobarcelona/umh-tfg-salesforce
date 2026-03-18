@@ -10,23 +10,41 @@ public with sharing class OrderTrackingController {
             LIMIT 1
         ];
 
+        return trackings.isEmpty() ? null : trackings[0];
+    }
+
+    @AuraEnabled
+    public static void refreshTrackingInfo(Id orderId) {
+        List<Shipment_Tracking__c> trackings = [
+            SELECT Id, Last_API_Update__c
+            FROM Shipment_Tracking__c
+            WHERE Order__c = :orderId
+            LIMIT 1
+        ];
+
         if (trackings.isEmpty()) {
-            return null;
+            return;
         }
 
         Shipment_Tracking__c tracking = trackings[0];
 
-        // Si los datos tienen más de 1 hora, actualizar desde API
         if (tracking.Last_API_Update__c == null ||
             tracking.Last_API_Update__c < System.now().addHours(-1)) {
             ShipmentTrackingService.updateTrackingInfo(tracking.Id);
         }
-
-        return tracking;
     }
 
     @AuraEnabled(cacheable=true)
-    public static List<Order> getCustomerOrders(Id accountId) {
+    public static List<Order> getCustomerOrders() {
+        Id userId = UserInfo.getUserId();
+        User currentUser = [SELECT ContactId, Contact.AccountId FROM User WHERE Id = :userId LIMIT 1];
+
+        if (currentUser.ContactId == null || currentUser.Contact.AccountId == null) {
+            return new List<Order>();
+        }
+
+        Id accountId = currentUser.Contact.AccountId;
+
         return [
             SELECT Id, OrderNumber, Status, EffectiveDate, TotalAmount,
                    Payment_Status__c, Shipping_Status__c,
