@@ -1,0 +1,46 @@
+{
+  "appPageId" : "0b3dfae4-c035-4c09-bf45-a7e0a6b9a07b",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "249bc044-37bb-4a21-b73b-9feda0838ff5",
+  "label" : "Mis Pedidos",
+  "regions" : [ {
+    "id" : "ce43aec9-c6d4-4846-ae94-ceaa07d70fe7",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:orderTrackingList",
+      "id" : "fc502f41-c779-492c-a27c-a76cb849ece0",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "acb6fbbe-731b-4ba8-812b-00dd92918c10",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "7dbd3c5a-0daf-49ed-8a9f-56995e2fd416",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Mis Pedidos"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "84db0da5-81f9-4da9-9fa8-da398db90e37",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "c8d1466c-aa23-4310-be08-c2c0e59f588e",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-mis-pedidos"
+}

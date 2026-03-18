@@ -7,7 +7,7 @@
   "regions" : [ {
     "components" : [ {
       "componentAttributes" : {
-        "richTextValue" : "<img class='sfdcCbImage' src='/sfsites/c/img/community/cpt/cpt-home-banner.png'             style='width:100%;'/>"
+        "richTextValue" : "<p style=\"text-align: center;\"><img class=\"sfdcCbImage\" alt=\"\" src=\"{!contentAsset.IT_SOLUTIONS.1}\" style=\"width: 786.052px; height: 112.583px;\"></p>\n<p style=\"text-align: center;\"><strong style=\"background-color: rgb(102, 163, 224); font-size: 48px;\"> Customer Portal </strong></p>\n<p><br></p>\n<p>&nbsp;</p>"
       },
       "componentName" : "forceCommunity:richTextInline",
       "id" : "6aaca94d-5515-41a0-9c9e-eb86e622e9ef",
@@ -26,13 +26,14 @@
         "iconSize" : "medium",
         "noImageColor" : "rgb(116,116,116)",
         "overlay" : "rgba(0,0,0,0.01)",
-        "templateType" : "default",
+        "templateType" : "icon",
+        "tileMenuEditor" : "Default_Navigation",
         "titleColor" : "",
         "titleFontSize" : "medium",
         "titleHorizontalAlign" : "center"
       },
       "componentName" : "community_navigation:tileMenu",
-      "id" : "bd108ff6-e6bf-4929-b95f-bf6ca2dea9c2",
+      "id" : "05620f38-f221-4ba7-9c70-8d7ccdceacda",
       "renderPriority" : "NEUTRAL",
       "renditionMap" : { },
       "type" : "component"
@@ -41,62 +42,10 @@
     "regionName" : "header",
     "type" : "region"
   }, {
-    "components" : [ {
-      "componentAttributes" : {
-        "enableInlineEdit" : true,
-        "filterName" : "MyOpenCases",
-        "layout" : "STANDARD",
-        "pageSize" : 5,
-        "scope" : "Case",
-        "showActionBar" : true,
-        "showChartsPanel" : true,
-        "showDisplay" : "showall",
-        "showFilterPanel" : true,
-        "showImageIcon" : true,
-        "showManualRefreshButton" : true,
-        "showObjectName" : true,
-        "showPinnedList" : true,
-        "showSearchBar" : true
-      },
-      "componentName" : "forceCommunity:objectHome",
-      "id" : "0a86f0cd-a3a0-49d7-ac3f-16b59442e731",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    } ],
     "id" : "8f8d8086-c714-4841-a30a-551ea60bdc62",
     "regionName" : "content",
     "type" : "region"
   }, {
-    "components" : [ {
-      "componentAttributes" : {
-        "deleteButtonText" : "Delete",
-        "pageSize" : 10,
-        "resumeButtonAlign" : "right",
-        "resumeButtonLabel" : "Resume",
-        "showDeleteButton" : false,
-        "showNumberInTitle" : true,
-        "showOwnerName" : false,
-        "showPauseReason" : true,
-        "showPauseStep" : true,
-        "showPauseTime" : true,
-        "title" : "Paused Flows"
-      },
-      "componentName" : "forceCommunity:pausedInterviewCard",
-      "id" : "87f5cb92-bb62-4313-898d-02903198eee8",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    }, {
-      "componentAttributes" : {
-        "richTextValue" : "             <p><b style=\"font-size: 16px;\">Quick Links</b></p>             <p><br></p>             <p><a href=\"http://www.salesforce.com/\" target=\"_blank\">Link 1</a></p>             <p><br></p>             <p><a href=\"http://www.salesforce.com/\" target=\"_blank\">Link 2</a></p>             <p><br></p>             <p><a href=\"http://www.salesforce.com/\" target=\"_blank\">Link 3</a></p>             <p><br></p>             <p><a href=\"http://www.salesforce.com/\" target=\"_blank\">Link 4</a></p>         "
-      },
-      "componentName" : "forceCommunity:richTextInline",
-      "id" : "c9f2199b-80d1-464e-8981-3d434b2b107d",
-      "renderPriority" : "NEUTRAL",
-      "renditionMap" : { },
-      "type" : "component"
-    } ],
     "id" : "9e07a35b-e350-4d4a-91b9-34e5cf9cf698",
     "regionName" : "sidebar",
     "type" : "region"
