@@ -1,4 +1,4 @@
-import { LightningElement, api, track } from 'lwc';
+import { LightningElement, api } from 'lwc';
 import searchProducts from '@salesforce/apex/ProductSearchController.searchProducts';
 import addProductsToOpportunity from '@salesforce/apex/ProductSearchController.addProductsToOpportunity';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
