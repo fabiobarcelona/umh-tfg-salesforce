@@ -136,43 +136,104 @@ System.debug('Opportunities insertadas: ' + opps.size());
 // inmediatamente ya que LAST_ACTIVITY = null (se interpreta como > 30 días).
 
 // =========================================================
-// 4. PRODUCTS & PRICEBOOK ENTRIES
+// 4. PRODUCTS & PRICEBOOK ENTRIES (25 productos)
+// Familias según Product2Family StandardValueSet:
+//   Componentes, Periféricos, Software, Servicios a medida
 // =========================================================
 List<Product2> products = new List<Product2>{
-    new Product2(Name='Laptop Dell XPS 15', ProductCode='HW-001',
-                 Description='Laptop profesional 15 pulgadas', Family='Hardware',
-                 IsActive=true),
-    new Product2(Name='Servidor HP ProLiant DL380', ProductCode='HW-002',
-                 Description='Servidor rack 2U', Family='Hardware', IsActive=true),
-    new Product2(Name='Switch Cisco Catalyst 2960', ProductCode='NET-001',
-                 Description='Switch 24 puertos gestionable', Family='Hardware',
-                 IsActive=true),
+
+    // --- Componentes (7 productos) --- índices 0-6
+    new Product2(Name='Procesador Intel Core i9-14900K', ProductCode='COMP-001',
+                 Description='Procesador 24 núcleos, 5.8 GHz boost', Family='Componentes', IsActive=true),
+    new Product2(Name='Tarjeta Gráfica NVIDIA RTX 4070', ProductCode='COMP-002',
+                 Description='GPU 12GB GDDR6X para workstations', Family='Componentes', IsActive=true),
+    new Product2(Name='Memoria RAM Kingston 32GB DDR5', ProductCode='COMP-003',
+                 Description='Kit 2x16GB DDR5-5600 para servidores', Family='Componentes', IsActive=true),
+    new Product2(Name='SSD Samsung 990 Pro 2TB', ProductCode='COMP-004',
+                 Description='NVMe M.2 PCIe 4.0, 7450 MB/s lectura', Family='Componentes', IsActive=true),
+    new Product2(Name='Placa Base ASUS ProArt Z790', ProductCode='COMP-005',
+                 Description='ATX, LGA1700, DDR5, Thunderbolt 4', Family='Componentes', IsActive=true),
+    new Product2(Name='Fuente Corsair RM1000x', ProductCode='COMP-006',
+                 Description='1000W 80+ Gold modular', Family='Componentes', IsActive=true),
+    new Product2(Name='Disco Duro Seagate Exos 16TB', ProductCode='COMP-007',
+                 Description='HDD empresarial 7200rpm SAS', Family='Componentes', IsActive=true),
+
+    // --- Periféricos (7 productos) --- índices 7-13
+    new Product2(Name='Monitor Dell UltraSharp U2723QE', ProductCode='PER-001',
+                 Description='27" 4K USB-C IPS profesional', Family='Periféricos', IsActive=true),
+    new Product2(Name='Teclado Logitech MX Keys Business', ProductCode='PER-002',
+                 Description='Teclado inalámbrico retroiluminado', Family='Periféricos', IsActive=true),
+    new Product2(Name='Ratón Logitech MX Master 3S', ProductCode='PER-003',
+                 Description='Ratón ergonómico empresarial', Family='Periféricos', IsActive=true),
+    new Product2(Name='Impresora HP LaserJet Pro M404dn', ProductCode='PER-004',
+                 Description='Láser monocromo dúplex red', Family='Periféricos', IsActive=true),
+    new Product2(Name='Switch Cisco Catalyst 2960-X', ProductCode='PER-005',
+                 Description='Switch 24 puertos gestionable PoE+', Family='Periféricos', IsActive=true),
+    new Product2(Name='SAI APC Smart-UPS 1500VA', ProductCode='PER-006',
+                 Description='UPS interactivo para rack', Family='Periféricos', IsActive=true),
+    new Product2(Name='Webcam Logitech Brio 4K', ProductCode='PER-007',
+                 Description='Cámara 4K HDR para videoconferencia', Family='Periféricos', IsActive=true),
+
+    // --- Software (6 productos) --- índices 14-19
     new Product2(Name='Microsoft Office 365 Business', ProductCode='SW-001',
-                 Description='Suite ofimática por usuario/año', Family='Software',
-                 IsActive=true),
+                 Description='Suite ofimática por usuario/año', Family='Software', IsActive=true),
     new Product2(Name='Antivirus Kaspersky Endpoint', ProductCode='SW-002',
-                 Description='Seguridad endpoint por licencia/año', Family='Software',
-                 IsActive=true),
+                 Description='Seguridad endpoint por licencia/año', Family='Software', IsActive=true),
+    new Product2(Name='Adobe Creative Cloud Empresas', ProductCode='SW-003',
+                 Description='Suite diseño por usuario/año', Family='Software', IsActive=true),
+    new Product2(Name='Licencia Windows Server 2025 Std', ProductCode='SW-004',
+                 Description='Licencia servidor 16 cores', Family='Software', IsActive=true),
+    new Product2(Name='VMware vSphere Essentials Plus', ProductCode='SW-005',
+                 Description='Virtualización hasta 3 hosts', Family='Software', IsActive=true),
+    new Product2(Name='Veeam Backup & Replication', ProductCode='SW-006',
+                 Description='Backup empresarial por socket/año', Family='Software', IsActive=true),
+
+    // --- Servicios a medida (5 productos) --- índices 20-24
     new Product2(Name='Soporte Premium Anual', ProductCode='SRV-001',
-                 Description='Soporte técnico prioritario 24/7', Family='Services',
-                 IsActive=true)
+                 Description='Soporte técnico prioritario 24/7', Family='Servicios a medida', IsActive=true),
+    new Product2(Name='Consultoría Infraestructura TI', ProductCode='SRV-002',
+                 Description='Análisis y diseño de infraestructura, por jornada', Family='Servicios a medida', IsActive=true),
+    new Product2(Name='Migración Cloud', ProductCode='SRV-003',
+                 Description='Servicio de migración a entorno cloud', Family='Servicios a medida', IsActive=true),
+    new Product2(Name='Auditoría de Seguridad', ProductCode='SRV-004',
+                 Description='Pentesting y análisis de vulnerabilidades', Family='Servicios a medida', IsActive=true),
+    new Product2(Name='Formación Técnica Personalizada', ProductCode='SRV-005',
+                 Description='Curso a medida para equipo técnico, por jornada', Family='Servicios a medida', IsActive=true)
 };
 insert products;
 System.debug('Products insertados: ' + products.size());
 
+// PricebookEntries para los 25 productos
 List<PricebookEntry> pbeList = new List<PricebookEntry>{
-    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[0].Id,
-                       UnitPrice=1199.99, IsActive=true),
-    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[1].Id,
-                       UnitPrice=4500.00, IsActive=true),
-    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[2].Id,
-                       UnitPrice=890.00, IsActive=true),
-    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[3].Id,
-                       UnitPrice=120.00, IsActive=true),
-    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[4].Id,
-                       UnitPrice=45.00, IsActive=true),
-    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[5].Id,
-                       UnitPrice=2400.00, IsActive=true)
+    // Componentes
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[0].Id,  UnitPrice=589.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[1].Id,  UnitPrice=599.99, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[2].Id,  UnitPrice=129.90, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[3].Id,  UnitPrice=179.99, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[4].Id,  UnitPrice=449.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[5].Id,  UnitPrice=189.90, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[6].Id,  UnitPrice=420.00, IsActive=true),
+    // Periféricos
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[7].Id,  UnitPrice=619.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[8].Id,  UnitPrice=109.99, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[9].Id,  UnitPrice=99.99, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[10].Id, UnitPrice=349.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[11].Id, UnitPrice=890.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[12].Id, UnitPrice=245.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[13].Id, UnitPrice=189.00, IsActive=true),
+    // Software
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[14].Id, UnitPrice=120.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[15].Id, UnitPrice=45.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[16].Id, UnitPrice=659.88, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[17].Id, UnitPrice=1069.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[18].Id, UnitPrice=5495.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[19].Id, UnitPrice=780.00, IsActive=true),
+    // Servicios a medida
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[20].Id, UnitPrice=2400.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[21].Id, UnitPrice=800.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[22].Id, UnitPrice=3500.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[23].Id, UnitPrice=2200.00, IsActive=true),
+    new PricebookEntry(Pricebook2Id=stdPricebookId, Product2Id=products[24].Id, UnitPrice=600.00, IsActive=true)
 };
 insert pbeList;
 System.debug('PricebookEntries insertadas: ' + pbeList.size());
@@ -181,32 +242,59 @@ System.debug('PricebookEntries insertadas: ' + pbeList.size());
 // 5. INVENTORY (Stock Disponible vs Reservado & Bajo Reorder Point)
 // =========================================================
 // Nota: el flow "Update Inventory on Order Item" descuenta Available_Stock__c
-// al crear OrderItems. Los valores iniciales deben cubrir las cantidades pedidas:
-//   products[0] Laptop:   OrderItem qty=3  → mínimo 4
-//   products[1] Servidor: OrderItem qty=1  → mínimo 2
-//   products[2] Switch:   OrderItem qty=2  → mínimo 3
-//   products[3] Office:   OrderItem qty=10 → mínimo 11
-//   products[5] Soporte:  OrderItem qty=1  → mínimo 2
-// Los productos bajo reorder point se mantienen con stock suficiente para los pedidos
-// pero por debajo del reorder point DESPUÉS del descuento del flow.
+// al crear OrderItems. Los valores iniciales deben cubrir las cantidades pedidas.
+// Creamos inventario para todos los productos físicos (Componentes y Periféricos)
+// y algunos de Software/Servicios que gestionan licencias.
 List<Inventory__c> inventories = new List<Inventory__c>{
-    // Stock normal (por encima de reorder point tras descuento)
-    new Inventory__c(Product__c=products[0].Id, Available_Stock__c=45,
-                     Reserved_Stock__c=0, Reorder_Point__c=10),
-    new Inventory__c(Product__c=products[1].Id, Available_Stock__c=12,
-                     Reserved_Stock__c=0, Reorder_Point__c=5),
-    new Inventory__c(Product__c=products[2].Id, Available_Stock__c=30,
-                     Reserved_Stock__c=0, Reorder_Point__c=10),
-    // Stock bajo reorder point TRAS el descuento del flow:
-    // Office: 13 inicial - 10 pedido = 3 restante < reorder 20
-    new Inventory__c(Product__c=products[3].Id, Available_Stock__c=13,
-                     Reserved_Stock__c=0, Reorder_Point__c=20),
-    // Antivirus: sin OrderItem, ya está bajo reorder point directamente
-    new Inventory__c(Product__c=products[4].Id, Available_Stock__c=7,
-                     Reserved_Stock__c=0, Reorder_Point__c=15),
-    // Soporte: 3 inicial - 1 pedido = 2 restante < reorder 10
+
+    // --- Componentes: stock normal ---
+    new Inventory__c(Product__c=products[0].Id, Available_Stock__c=35,
+                     Reserved_Stock__c=0, Reorder_Point__c=10),   // Intel i9
+    new Inventory__c(Product__c=products[1].Id, Available_Stock__c=20,
+                     Reserved_Stock__c=0, Reorder_Point__c=8),    // RTX 4070
+    new Inventory__c(Product__c=products[2].Id, Available_Stock__c=50,
+                     Reserved_Stock__c=0, Reorder_Point__c=15),   // RAM DDR5
+    new Inventory__c(Product__c=products[3].Id, Available_Stock__c=40,
+                     Reserved_Stock__c=0, Reorder_Point__c=12),   // SSD 2TB
+    new Inventory__c(Product__c=products[4].Id, Available_Stock__c=18,
+                     Reserved_Stock__c=0, Reorder_Point__c=5),    // Placa ASUS
+    // Componentes: stock bajo reorder point
     new Inventory__c(Product__c=products[5].Id, Available_Stock__c=3,
-                     Reserved_Stock__c=0, Reorder_Point__c=10)
+                     Reserved_Stock__c=0, Reorder_Point__c=10),   // Fuente Corsair → bajo
+    new Inventory__c(Product__c=products[6].Id, Available_Stock__c=2,
+                     Reserved_Stock__c=0, Reorder_Point__c=8),    // HDD Seagate → bajo
+
+    // --- Periféricos: stock normal ---
+    new Inventory__c(Product__c=products[7].Id, Available_Stock__c=25,
+                     Reserved_Stock__c=0, Reorder_Point__c=8),    // Monitor Dell
+    new Inventory__c(Product__c=products[8].Id, Available_Stock__c=60,
+                     Reserved_Stock__c=0, Reorder_Point__c=20),   // Teclado MX Keys
+    new Inventory__c(Product__c=products[9].Id, Available_Stock__c=55,
+                     Reserved_Stock__c=0, Reorder_Point__c=20),   // Ratón MX Master
+    new Inventory__c(Product__c=products[10].Id, Available_Stock__c=15,
+                     Reserved_Stock__c=0, Reorder_Point__c=5),    // Impresora HP
+    new Inventory__c(Product__c=products[11].Id, Available_Stock__c=30,
+                     Reserved_Stock__c=0, Reorder_Point__c=10),   // Switch Cisco
+    // Periféricos: stock bajo reorder point
+    new Inventory__c(Product__c=products[12].Id, Available_Stock__c=4,
+                     Reserved_Stock__c=0, Reorder_Point__c=10),   // SAI APC → bajo
+    new Inventory__c(Product__c=products[13].Id, Available_Stock__c=6,
+                     Reserved_Stock__c=0, Reorder_Point__c=15),   // Webcam Brio → bajo
+
+    // --- Software: licencias gestionadas como stock ---
+    new Inventory__c(Product__c=products[14].Id, Available_Stock__c=200,
+                     Reserved_Stock__c=0, Reorder_Point__c=50),   // Office 365
+    new Inventory__c(Product__c=products[15].Id, Available_Stock__c=150,
+                     Reserved_Stock__c=0, Reorder_Point__c=30),   // Kaspersky
+    // Software: bajo reorder point
+    new Inventory__c(Product__c=products[16].Id, Available_Stock__c=8,
+                     Reserved_Stock__c=0, Reorder_Point__c=20),   // Adobe CC → bajo
+    new Inventory__c(Product__c=products[17].Id, Available_Stock__c=5,
+                     Reserved_Stock__c=0, Reorder_Point__c=3),    // Windows Server
+    new Inventory__c(Product__c=products[18].Id, Available_Stock__c=10,
+                     Reserved_Stock__c=0, Reorder_Point__c=3),    // VMware
+    new Inventory__c(Product__c=products[19].Id, Available_Stock__c=12,
+                     Reserved_Stock__c=0, Reorder_Point__c=5)     // Veeam
 };
 insert inventories;
 System.debug('Inventories insertadas: ' + inventories.size());
@@ -232,18 +320,32 @@ List<Order> orders = new List<Order>{
 insert orders;
 System.debug('Orders insertadas: ' + orders.size());
 
-// Order Items
+// Order Items — usando productos de distintas familias
 List<OrderItem> orderItems = new List<OrderItem>{
+    // Order 0 (TechCorp): Procesador i9 x2 + RAM DDR5 x4 + Office 365 x10
     new OrderItem(OrderId=orders[0].Id, Product2Id=products[0].Id,
-                  PricebookEntryId=pbeList[0].Id, Quantity=3, UnitPrice=1199.99),
-    new OrderItem(OrderId=orders[0].Id, Product2Id=products[3].Id,
-                  PricebookEntryId=pbeList[3].Id, Quantity=10, UnitPrice=120.00),
-    new OrderItem(OrderId=orders[1].Id, Product2Id=products[2].Id,
-                  PricebookEntryId=pbeList[2].Id, Quantity=2, UnitPrice=890.00),
+                  PricebookEntryId=pbeList[0].Id, Quantity=2, UnitPrice=589.00),
+    new OrderItem(OrderId=orders[0].Id, Product2Id=products[2].Id,
+                  PricebookEntryId=pbeList[2].Id, Quantity=4, UnitPrice=129.90),
+    new OrderItem(OrderId=orders[0].Id, Product2Id=products[14].Id,
+                  PricebookEntryId=pbeList[14].Id, Quantity=10, UnitPrice=120.00),
+    // Order 1 (Distribuciones): Switch Cisco x2 + Monitor Dell x3
+    new OrderItem(OrderId=orders[1].Id, Product2Id=products[11].Id,
+                  PricebookEntryId=pbeList[11].Id, Quantity=2, UnitPrice=890.00),
+    new OrderItem(OrderId=orders[1].Id, Product2Id=products[7].Id,
+                  PricebookEntryId=pbeList[7].Id, Quantity=3, UnitPrice=619.00),
+    // Order 2 (Innovatech): RTX 4070 x1 + VMware x1 + Soporte Premium x1
     new OrderItem(OrderId=orders[2].Id, Product2Id=products[1].Id,
-                  PricebookEntryId=pbeList[1].Id, Quantity=1, UnitPrice=4500.00),
-    new OrderItem(OrderId=orders[3].Id, Product2Id=products[5].Id,
-                  PricebookEntryId=pbeList[5].Id, Quantity=1, UnitPrice=2400.00)
+                  PricebookEntryId=pbeList[1].Id, Quantity=1, UnitPrice=599.99),
+    new OrderItem(OrderId=orders[2].Id, Product2Id=products[18].Id,
+                  PricebookEntryId=pbeList[18].Id, Quantity=1, UnitPrice=5495.00),
+    new OrderItem(OrderId=orders[2].Id, Product2Id=products[20].Id,
+                  PricebookEntryId=pbeList[20].Id, Quantity=1, UnitPrice=2400.00),
+    // Order 3 (Hernández): Auditoría Seguridad x1 + Kaspersky x20
+    new OrderItem(OrderId=orders[3].Id, Product2Id=products[23].Id,
+                  PricebookEntryId=pbeList[23].Id, Quantity=1, UnitPrice=2200.00),
+    new OrderItem(OrderId=orders[3].Id, Product2Id=products[15].Id,
+                  PricebookEntryId=pbeList[15].Id, Quantity=20, UnitPrice=45.00)
 };
 insert orderItems;
 System.debug('OrderItems insertados: ' + orderItems.size());
@@ -384,7 +486,7 @@ List<Lead> leads = new List<Lead>{
     new Lead(FirstName='Roberto', LastName='Sánchez', Company='Sánchez Tech SL',
              Email='roberto.sanchez@sanchez-tech.es', Phone='913456789',
              LeadSource='Web', Status='Open - Not Contacted',
-             ProductInterest__c='Hardware'),
+             ProductInterest__c='Componentes'),
     new Lead(FirstName='Elena', LastName='Vázquez', Company='Vázquez Digital SA',
              Email='elena.vazquez@vazquez-digital.es', Phone='934567890',
              LeadSource='Phone Inquiry', Status='Open - Not Contacted',
@@ -392,11 +494,11 @@ List<Lead> leads = new List<Lead>{
     new Lead(FirstName='Miguel', LastName='Torres', Company='Torres Consulting',
              Email='miguel.torres@torres-consulting.es', Phone='964567890',
              LeadSource='Partner Referral', Status='Working',
-             ProductInterest__c='Hardware'),
+             ProductInterest__c='Periféricos'),
     new Lead(FirstName='Sofía', LastName='Moreno', Company='Moreno & Asociados',
              Email='sofia.moreno@moreno-asociados.es', Phone='954567890',
              LeadSource='Web', Status='Open - Not Contacted',
-             ProductInterest__c='Software')
+             ProductInterest__c='Soluciones a medida')
 };
 insert leads;
 System.debug('Leads insertados: ' + leads.size());
@@ -408,9 +510,9 @@ System.debug('=== DATOS DE MUESTRA INSERTADOS CORRECTAMENTE ===');
 System.debug('Accounts: ' + accounts.size());
 System.debug('Contacts: ' + contacts.size());
 System.debug('Opportunities: ' + opps.size() + ' (8 pipeline, 3 ganadas mes, 1 perdida, 3 con descuento pendiente)');
-System.debug('Products: ' + products.size());
+System.debug('Products: ' + products.size() + ' (7 Componentes, 7 Periféricos, 6 Software, 5 Servicios a medida)');
 System.debug('PricebookEntries: ' + pbeList.size());
-System.debug('Inventory: ' + inventories.size() + ' (3 normales, 3 bajo reorder point)');
+System.debug('Inventory: ' + inventories.size() + ' (14 normales, 6 bajo reorder point)');
 System.debug('Orders: ' + orders.size());
 System.debug('OrderItems: ' + orderItems.size());
 System.debug('Shipment Trackings: ' + shipments.size());
