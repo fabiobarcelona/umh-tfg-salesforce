@@ -45,7 +45,7 @@ private class OrderTrackingControllerTest {
 
         Test.startTest();
         // Crear tracking sin Last_API_Update__c para forzar el refresh
-        TestDataFactory.createShipmentTrackingWithStatus(ord.Id, 'TEST-TRACK-002', 'DHL', 'Pendiente');
+        TestDataFactory.createShipmentTrackingWithStatus(ord.Id, 'TEST-TRACK-002', 'DHL', 'Pendiente de recogida');
         OrderTrackingController.refreshTrackingInfo(ord.Id);
         Test.stopTest();
 
