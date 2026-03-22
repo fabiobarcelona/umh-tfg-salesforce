@@ -1,0 +1,196 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 OPR/128.0.0.0" version="29.6.4">
+  <diagram name="Página-1" id="lN0F0BGYIpu77sDynXmx">
+    <mxGraphModel dx="4042" dy="2300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QPsBk32kZoccWDs4JK3V-124" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=42;fontStyle=1;" value="Diagrama Entidad-Relación" vertex="1">
+          <mxGeometry height="50" width="692" x="510" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-125" parent="1" style="rounded=1;fillColor=#f9f9f9;strokeColor=#aaaaaa;fontSize=15;" value="" vertex="1">
+          <mxGeometry height="210" width="650" x="60" y="1920" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-126" parent="1" style="text;html=1;fontSize=25;fontStyle=1;align=left;" value="Leyenda" vertex="1">
+          <mxGeometry height="25" width="100" x="105" y="1937.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-127" parent="1" style="rounded=1;fillColor=#1e3a5f;strokeColor=#1e3a5f;fontSize=15;" value="" vertex="1">
+          <mxGeometry height="12" width="20" x="105" y="1989.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-128" parent="1" style="text;html=1;fontSize=15;align=left;" value="Objetos Estándar" vertex="1">
+          <mxGeometry height="20" width="160" x="132" y="1985.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-129" parent="1" style="rounded=1;fillColor=#7d4a00;strokeColor=#7d4a00;fontSize=15;" value="" vertex="1">
+          <mxGeometry height="12" width="20" x="105" y="2013.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-130" parent="1" style="text;html=1;fontSize=15;align=left;" value="Objetos Personalizados" vertex="1">
+          <mxGeometry height="20" width="180" x="132" y="2009.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-131" parent="1" style="text;html=1;fontSize=15;align=left;" value="─── Lookup (1:N)" vertex="1">
+          <mxGeometry height="20" width="200" x="105" y="2033.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-132" parent="1" style="text;html=1;fontSize=15;align=left;fontStyle=1;" value="══ Master-Detail" vertex="1">
+          <mxGeometry height="20" width="200" x="105" y="2055.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-133" parent="1" style="text;html=1;fontSize=15;align=left;fontStyle=2;" value="- - Conversión Lead" vertex="1">
+          <mxGeometry height="20" width="200" x="105" y="2077.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-134" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#1e3a5f;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#1e3a5f;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;Lead&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Company&lt;/td&gt;&lt;td&gt;Text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Email&lt;/td&gt;&lt;td&gt;Email&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fff3cd;&quot;&gt;&lt;td&gt;ProductInterest__c&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fff3cd;&quot;&gt;&lt;td&gt;Lead_Source_Detail__c&lt;/td&gt;&lt;td&gt;Text&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="215" width="240" x="156" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-135" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#1e3a5f;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#1e3a5f;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;Account&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Industry&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Phone&lt;/td&gt;&lt;td&gt;Phone&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fff3cd;&quot;&gt;&lt;td&gt;Customer_Type__c&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fff3cd;&quot;&gt;&lt;td&gt;Preferred_Payment_Method__c&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="195" width="260" x="546" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-136" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#1e3a5f;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#1e3a5f;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;Opportunity&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;StageName&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Amount&lt;/td&gt;&lt;td&gt;Currency&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CloseDate&lt;/td&gt;&lt;td&gt;Date&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;AccountId&lt;/td&gt;&lt;td&gt;FK → Account&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fff3cd;&quot;&gt;&lt;td&gt;Discount_Percentage__c&lt;/td&gt;&lt;td&gt;Percent&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fff3cd;&quot;&gt;&lt;td&gt;Requires_Approval__c&lt;/td&gt;&lt;td&gt;Checkbox&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fff3cd;&quot;&gt;&lt;td&gt;Approval_Status__c&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="280" width="270" x="156" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-137" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#1e3a5f;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#1e3a5f;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;Quote&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;TotalPrice&lt;/td&gt;&lt;td&gt;Currency&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;OpportunityId&lt;/td&gt;&lt;td&gt;FK → Opportunity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IsSyncing&lt;/td&gt;&lt;td&gt;Boolean&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="195" width="250" x="166" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-138" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#1e3a5f;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#1e3a5f;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;Contact&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FirstName / LastName&lt;/td&gt;&lt;td&gt;Text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Email&lt;/td&gt;&lt;td&gt;Email&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Phone&lt;/td&gt;&lt;td&gt;Phone&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;AccountId&lt;/td&gt;&lt;td&gt;FK → Account&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="170" width="250" x="783" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-139" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#1e3a5f;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#1e3a5f;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;Order&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OrderNumber&lt;/td&gt;&lt;td&gt;Auto&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;TotalAmount&lt;/td&gt;&lt;td&gt;Currency&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;AccountId&lt;/td&gt;&lt;td&gt;FK → Account&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;QuoteId&lt;/td&gt;&lt;td&gt;FK → Quote&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fff3cd;&quot;&gt;&lt;td&gt;Payment_Status__c&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fff3cd;&quot;&gt;&lt;td&gt;Shipping_Status__c&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="255" width="270" x="773" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-140" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#1e3a5f;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#1e3a5f;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;QuoteLineItem&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;QuoteId&lt;/td&gt;&lt;td&gt;MD → Quote&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Product2Id&lt;/td&gt;&lt;td&gt;FK → Product2&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Quantity&lt;/td&gt;&lt;td&gt;Number&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;UnitPrice&lt;/td&gt;&lt;td&gt;Currency&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Discount&lt;/td&gt;&lt;td&gt;Percent&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="195" width="250" x="176" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-141" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#1e3a5f;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#1e3a5f;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;Product2&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ProductCode&lt;/td&gt;&lt;td&gt;Text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Family&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Description&lt;/td&gt;&lt;td&gt;TextArea&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IsActive&lt;/td&gt;&lt;td&gt;Boolean&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="195" width="240" x="676" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-142" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#1e3a5f;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#1e3a5f;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;Case&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Subject&lt;/td&gt;&lt;td&gt;Text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Type&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;AccountId&lt;/td&gt;&lt;td&gt;FK → Account&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;ContactId&lt;/td&gt;&lt;td&gt;FK → Contact&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fff3cd;&quot;&gt;&lt;td&gt;Related_Order__c&lt;/td&gt;&lt;td&gt;FK → Order&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fff3cd;&quot;&gt;&lt;td&gt;Resolution_Time__c&lt;/td&gt;&lt;td&gt;Formula (horas)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="255" width="270" x="1138" y="467.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-143" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#1e3a5f;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#1e3a5f;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;OrderItem&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;OrderId&lt;/td&gt;&lt;td&gt;MD → Order&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Product2Id&lt;/td&gt;&lt;td&gt;FK → Product2&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Quantity&lt;/td&gt;&lt;td&gt;Number&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;UnitPrice&lt;/td&gt;&lt;td&gt;Currency&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="170" width="250" x="1086" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-144" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#1e3a5f;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#1e3a5f;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;PricebookEntry&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Product2Id&lt;/td&gt;&lt;td&gt;FK → Product2&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Pricebook2Id&lt;/td&gt;&lt;td&gt;FK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;UnitPrice&lt;/td&gt;&lt;td&gt;Currency&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IsActive&lt;/td&gt;&lt;td&gt;Boolean&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="170" width="240" x="866" y="1590" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-145" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#1e3a5f;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#1e3a5f;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;Knowledge__kav&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#e8f0fe;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Title&lt;/td&gt;&lt;td&gt;Text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Summary&lt;/td&gt;&lt;td&gt;TextArea&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PublishStatus&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="140" width="240" x="1310" y="1495" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-146" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#7d4a00;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#7d4a00;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;Shipment_Tracking__c&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fde8cc;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fde8cc;&quot;&gt;&lt;td&gt;Order__c&lt;/td&gt;&lt;td&gt;MD → Order&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Tracking_Number__c&lt;/td&gt;&lt;td&gt;Text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Carrier__c&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status__c&lt;/td&gt;&lt;td&gt;Picklist&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Estimated_Delivery__c&lt;/td&gt;&lt;td&gt;Date&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Last_API_Update__c&lt;/td&gt;&lt;td&gt;DateTime&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="225" width="270" x="1286" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-147" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=#7d4a00;fillColor=#ffffff;align=left;verticalAlign=top;overflow=hidden;fontSize=14;" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; style=&quot;background:#7d4a00;color:#fff;font-weight:bold;text-align:center;padding:6px;&quot;&gt;Inventory__c&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fde8cc;&quot;&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt;ID (PK)&lt;/td&gt;&lt;/tr&gt;&lt;tr style=&quot;background:#fde8cc;&quot;&gt;&lt;td&gt;Product__c&lt;/td&gt;&lt;td&gt;FK → Product2&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Available_Stock__c&lt;/td&gt;&lt;td&gt;Number&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Reserved_Stock__c&lt;/td&gt;&lt;td&gt;Number&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Reorder_Point__c&lt;/td&gt;&lt;td&gt;Number&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Last_Updated__c&lt;/td&gt;&lt;td&gt;DateTime&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+          <mxGeometry height="200" width="250" x="466" y="1590" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-148" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-134" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;fontSize=14;strokeColor=#666666;" target="QPsBk32kZoccWDs4JK3V-135" value="Conversión (1:1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-149" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-135" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;" target="QPsBk32kZoccWDs4JK3V-138" value="1:N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="676" y="470" />
+              <mxPoint x="908" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-150" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-135" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="QPsBk32kZoccWDs4JK3V-136" value="1:N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="676" y="470" />
+              <mxPoint x="291" y="470" />
+            </Array>
+            <mxPoint x="386" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-151" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-135" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;" target="QPsBk32kZoccWDs4JK3V-139" value="1:N">
+          <mxGeometry relative="1" x="0.3156" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="676" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-152" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-135" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;" target="QPsBk32kZoccWDs4JK3V-142" value="1:N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-153" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-136" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="QPsBk32kZoccWDs4JK3V-137" value="1:N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="291" y="880" />
+              <mxPoint x="291" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-154" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-137" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;strokeWidth=2;" target="QPsBk32kZoccWDs4JK3V-140" value="MD 1:N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="291" y="1270" />
+              <mxPoint x="291" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-156" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-139" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;strokeWidth=2;" target="QPsBk32kZoccWDs4JK3V-143" value="MD 1:N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1031" y="1160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-157" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-139" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;strokeWidth=2;" target="QPsBk32kZoccWDs4JK3V-146" value="MD 1:1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1296" y="987" />
+              <mxPoint x="1296" y="987" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-158" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-139" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;dashed=1;strokeColor=#888888;" target="QPsBk32kZoccWDs4JK3V-142" value="1:N (Related_Order__c)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1031" y="800" />
+              <mxPoint x="1273" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-159" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-138" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;" target="QPsBk32kZoccWDs4JK3V-142" value="1:N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-160" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-141" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;" target="QPsBk32kZoccWDs4JK3V-140" value="1:N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-161" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-141" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="QPsBk32kZoccWDs4JK3V-143" value="1:N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1006" y="1390" />
+              <mxPoint x="1006" y="1305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-162" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-141" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.83;exitY=0.997;exitDx=0;exitDy=0;exitPerimeter=0;" target="QPsBk32kZoccWDs4JK3V-144" value="1:N">
+          <mxGeometry relative="1" x="-0.0515" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="875" y="1540" />
+              <mxPoint x="986" y="1540" />
+            </Array>
+            <mxPoint x="1216" y="1510" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-163" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-141" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;fontSize=14;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.154;exitY=0.993;exitDx=0;exitDy=0;exitPerimeter=0;" target="QPsBk32kZoccWDs4JK3V-147" value="1:1">
+          <mxGeometry relative="1" x="-0.0982" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="713" y="1540" />
+              <mxPoint x="591" y="1540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-164" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#fff9e6;strokeColor=#d6b656;align=left;" value="Fondo amarillo = campo personalizado (__c)&#xa;Fondo azul claro = clave foránea (FK)" vertex="1">
+          <mxGeometry height="55" width="310" x="350" y="1998.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-165" edge="1" parent="1" source="QPsBk32kZoccWDs4JK3V-137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.004;entryY=0.618;entryDx=0;entryDy=0;entryPerimeter=0;" target="QPsBk32kZoccWDs4JK3V-139">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QPsBk32kZoccWDs4JK3V-166" connectable="0" parent="QPsBk32kZoccWDs4JK3V-165" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;1:1&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0032" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
