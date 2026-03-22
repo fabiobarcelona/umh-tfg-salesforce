@@ -1,39 +1,30 @@
 <template>
     <lightning-card title="Historial de Etapas" icon-name="standard:opportunity">
-        <div class="slds-card__body slds-card__body_inner">
+        <div class="slds-card__body slds-card__body_inner timeline-container">
             <template if:true={hasData}>
-                <ul class="slds-timeline">
+                <ul class="timeline-list">
                     <template for:each={timelineData} for:item="item">
                         <li key={item.id} class={item.cssClass}>
-                            <div class="slds-media slds-media_timeline slds-media_small">
-                                <div class="slds-media__figure slds-media__figure_timeline">
-                                    <lightning-icon
-                                        icon-name={item.icon}
-                                        size="small">
-                                    </lightning-icon>
-                                </div>
-                                <div class="slds-media__body">
-                                    <div class="slds-grid slds-grid_align-spread slds-timeline__trigger">
-                                        <div class="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space">
-                                            <h3 class="slds-truncate">
-                                                <strong>{item.stage}</strong>
-                                            </h3>
-                                        </div>
-                                        <div class="slds-timeline__actions slds-timeline__actions_inline">
-                                            <p class="slds-timeline__date">{item.date}</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="timeline-bullet">
+                                <lightning-icon
+                                    icon-name={item.icon}
+                                    size="x-small"
+                                    class="timeline-icon">
+                                </lightning-icon>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="timeline-stage">{item.stage}</p>
+                                <p class="timeline-date">{item.date}</p>
                             </div>
                         </li>
                     </template>
                 </ul>
             </template>
             <template if:false={hasData}>
-                <p class="slds-text-color_weak">No hay historial de etapas disponible.</p>
+                <p class="slds-text-color_weak slds-p-around_small">No hay historial de etapas disponible.</p>
             </template>
             <template if:true={error}>
-                <p class="slds-text-color_error">Error al cargar el historial.</p>
+                <p class="slds-text-color_error slds-p-around_small">Error al cargar el historial.</p>
             </template>
         </div>
     </lightning-card>

@@ -1,0 +1,93 @@
+.timeline-container {
+    padding: 0.5rem 0.75rem 0.75rem;
+}
+
+.timeline-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Vertical connecting line */
+.timeline-list::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: #dddbda;
+    z-index: 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+/* Bullet circle */
+.timeline-bullet {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f3f3f3;
+    border: 2px solid #dddbda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+}
+
+.timeline-item_won .timeline-bullet {
+    background: #2e844a;
+    border-color: #2e844a;
+    --lwc-colorTextIconInverse: #ffffff;
+}
+
+.timeline-item_won .timeline-bullet lightning-icon {
+    --sds-c-icon-color-foreground: #ffffff;
+    --sds-c-icon-color-foreground-default: #ffffff;
+}
+
+.timeline-item_lost .timeline-bullet {
+    background: #ba0517;
+    border-color: #ba0517;
+}
+
+.timeline-item_lost .timeline-bullet lightning-icon {
+    --sds-c-icon-color-foreground: #ffffff;
+    --sds-c-icon-color-foreground-default: #ffffff;
+}
+
+.timeline-content {
+    padding-top: 0.3rem;
+    min-width: 0;
+}
+
+.timeline-stage {
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #181818;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.timeline-item_won .timeline-stage {
+    color: #2e844a;
+}
+
+.timeline-item_lost .timeline-stage {
+    color: #ba0517;
+}
+
+.timeline-date {
+    font-size: 0.75rem;
+    color: #706e6b;
+    margin: 0.1rem 0 0;
+}

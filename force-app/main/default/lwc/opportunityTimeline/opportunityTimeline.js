@@ -38,20 +38,20 @@ export default class OpportunityTimeline extends LightningElement {
 
     getStageIcon(stage) {
         const iconMap = {
-            'Prospección': 'custom:custom63',
-            'Cualificación': 'custom:custom19',
-            'Análisis de Necesidades': 'custom:custom87',
-            'Propuesta/Presupuesto': 'custom:custom14',
-            'Negociación/Revisión': 'custom:custom41',
-            'Closed Won': 'custom:custom58',
-            'Cerrada Perdida': 'custom:custom90'
+            'Prospecting': 'utility:user',
+            'Qualification': 'utility:filter',
+            'Needs Analysis': 'utility:search',
+            'Proposal/Price Quote': 'utility:file',
+            'Negotiation/Review': 'utility:chat',
+            'Closed Won': 'utility:check',
+            'Closed Lost': 'utility:close'
         };
-        return iconMap[stage] || 'custom:custom1';
+        return iconMap[stage] || 'utility:opportunity';
     }
 
     getStageClass(stage) {
-        return stage === 'Closed Won' ? 'slds-timeline__item_success' :
-            stage === 'Cerrada Perdida' ? 'slds-timeline__item_error' :
-                'slds-timeline__item_call';
+        if (stage === 'Closed Won') return 'timeline-item timeline-item_won';
+        if (stage === 'Closed Lost') return 'timeline-item timeline-item_lost';
+        return 'timeline-item';
     }
 }
