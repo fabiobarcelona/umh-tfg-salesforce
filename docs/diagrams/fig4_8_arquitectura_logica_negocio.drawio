@@ -1,0 +1,87 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 OPR/128.0.0.0" version="29.6.5">
+  <diagram name="Página-1" id="lN0F0BGYIpu77sDynXmx">
+    <mxGraphModel dx="8084" dy="4600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2895" pageHeight="4092" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-1" parent="1" style="swimlane;startSize=120;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=100;fontColor=#333333;strokeWidth=15;" value="Salesforce Platform" vertex="1">
+          <mxGeometry height="2980" width="4870" x="860" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-2" parent="0ZhfI66JjTu1734Dt9ed-1" style="swimlane;startSize=100;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=80;strokeWidth=10;" value="Capa de Lógica de Negocio" vertex="1">
+          <mxGeometry height="2330" width="3660" x="605" y="351.5" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-3" parent="0ZhfI66JjTu1734Dt9ed-2" style="swimlane;startSize=100;fillColor=#b8ddb4;strokeColor=#82b366;fontSize=60;fontStyle=1;strokeWidth=5;" value="Apex (Código)" vertex="1">
+          <mxGeometry height="870" width="1855" x="940" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-4" parent="0ZhfI66JjTu1734Dt9ed-3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="OpportunityTrigger&#xa;+ TriggerHandler" vertex="1">
+          <mxGeometry height="175" width="805" x="53" y="123" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-5" parent="0ZhfI66JjTu1734Dt9ed-3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="OrderTrackingController&#xa;(@AuraEnabled)" vertex="1">
+          <mxGeometry height="175" width="805" x="53" y="368" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-6" parent="0ZhfI66JjTu1734Dt9ed-3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="ProductSearchController&#xa;(@AuraEnabled)" vertex="1">
+          <mxGeometry height="175" width="805" x="950" y="368" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-7" parent="0ZhfI66JjTu1734Dt9ed-3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="OpportunityTimelineController&#xa;(@AuraEnabled)" vertex="1">
+          <mxGeometry height="175" width="805" x="53" y="613" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-8" parent="0ZhfI66JjTu1734Dt9ed-3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="InventoryUpdateBatch&#xa;(Scheduled / Nightly)" vertex="1">
+          <mxGeometry height="175" width="805" x="950" y="123" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-9" parent="0ZhfI66JjTu1734Dt9ed-3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="ShipmentTrackingService&#xa;(@future callout)" vertex="1">
+          <mxGeometry height="175" width="805" x="950" y="613" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-10" parent="0ZhfI66JjTu1734Dt9ed-2" style="swimlane;startSize=100;fillColor=#b8ddb4;strokeColor=#82b366;fontSize=60;fontStyle=1;strokeWidth=5;" value="Flow Builder (Declarativo)" vertex="1">
+          <mxGeometry height="860" width="1505" x="160" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-11" parent="0ZhfI66JjTu1734Dt9ed-10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="Order_Creation&#xa;(Screen Flow)" vertex="1">
+          <mxGeometry height="175" width="648" x="53" y="123" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-12" parent="0ZhfI66JjTu1734Dt9ed-10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="Assign_Lead_to_Owner&#xa;(AutoLaunched)" vertex="1">
+          <mxGeometry height="175" width="648" x="770" y="123" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-13" parent="0ZhfI66JjTu1734Dt9ed-10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="Update_Inventory_on_Order&#xa;(AutoLaunched)" vertex="1">
+          <mxGeometry height="175" width="648" x="53" y="368" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-14" parent="0ZhfI66JjTu1734Dt9ed-10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="Discount_Approval_Process&#xa;(AutoLaunched)" vertex="1">
+          <mxGeometry height="175" width="648" x="770" y="368" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-15" parent="0ZhfI66JjTu1734Dt9ed-10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="Shipment_Notification&#xa;(AutoLaunched)" vertex="1">
+          <mxGeometry height="175" width="648" x="53" y="613" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-16" parent="0ZhfI66JjTu1734Dt9ed-2" style="swimlane;startSize=100;fillColor=#b8ddb4;strokeColor=#82b366;fontSize=60;fontStyle=1;strokeWidth=5;" value="Funcionalidades de Plataforma" vertex="1">
+          <mxGeometry height="930" width="1400" x="2040" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-17" parent="0ZhfI66JjTu1734Dt9ed-16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="Validation Rules&#xa;(Inventory stock negativo)" vertex="1">
+          <mxGeometry height="175" width="648" x="53" y="123" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-18" parent="0ZhfI66JjTu1734Dt9ed-16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="Approval Process&#xa;(Descuento &amp;gt; 15%)" vertex="1">
+          <mxGeometry height="175" width="613" x="735" y="123" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-19" parent="0ZhfI66JjTu1734Dt9ed-16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="Permission Sets&#xa;IT_Solutions_Admin&#xa;IT_Solutions_Community" vertex="1">
+          <mxGeometry height="228" width="648" x="53" y="368" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-20" parent="0ZhfI66JjTu1734Dt9ed-16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="Named Credential&#xa;TrackingProvider" vertex="1">
+          <mxGeometry height="228" width="613" x="735" y="368" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-21" parent="0ZhfI66JjTu1734Dt9ed-16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;fontSize=50;strokeWidth=3;" value="Lead Assignment Rules&#xa;(colas por ProductInterest__c)" vertex="1">
+          <mxGeometry height="175" width="1278" x="70" y="683" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=60;fontStyle=1;dashed=1;strokeWidth=5;" value="API Externa de Tracking&#xa;(TrackingProvider)&#xa;&#xa;GET /v1/shipments/{id}&#xa;Response: status + estimated_delivery" vertex="1">
+          <mxGeometry height="455" width="875" x="3320" y="4690" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-23" edge="1" parent="1" source="0ZhfI66JjTu1734Dt9ed-9" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=1;fontSize=60;strokeColor=#b85450;fontColor=#b85450;dashed=1;strokeWidth=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="0ZhfI66JjTu1734Dt9ed-22" value="HTTP GET callout&#xa;(Named Credential)">
+          <mxGeometry relative="1" x="-0.0857" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="3758" y="4660" />
+              <mxPoint x="3758" y="4660" />
+            </Array>
+            <mxPoint x="8198" y="8090" as="sourcePoint" />
+            <mxPoint x="8208" y="8290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

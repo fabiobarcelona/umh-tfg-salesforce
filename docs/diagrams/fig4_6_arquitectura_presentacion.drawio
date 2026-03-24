@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 OPR/128.0.0.0" version="29.6.5">
+  <diagram name="Página-1" id="lN0F0BGYIpu77sDynXmx">
+    <mxGraphModel dx="8084" dy="4600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2895" pageHeight="4092" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-44" parent="1" style="swimlane;startSize=120;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=100;fontColor=#333333;strokeWidth=15;" value="Salesforce Platform" vertex="1">
+          <mxGeometry height="2460" width="3220" x="300" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-45" parent="0ZhfI66JjTu1734Dt9ed-44" style="swimlane;startSize=100;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=80;strokeWidth=10;" value="Capa de Presentación" vertex="1">
+          <mxGeometry height="1940" width="2720" x="250" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-46" parent="0ZhfI66JjTu1734Dt9ed-45" style="swimlane;startSize=100;fillColor=#b3d1f7;strokeColor=#6c8ebf;fontSize=60;fontStyle=1;strokeWidth=5;" value="Lightning Experience (Usuarios Internos)" vertex="1">
+          <mxGeometry height="770" width="2415" x="224" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-47" parent="0ZhfI66JjTu1734Dt9ed-46" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=50;strokeWidth=3;" value="Opportunity Record Page" vertex="1">
+          <mxGeometry height="193" width="560" x="161" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-48" parent="0ZhfI66JjTu1734Dt9ed-46" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=50;strokeWidth=3;" value="productSearchAndAdd&#xa;(LWC)" vertex="1">
+          <mxGeometry height="193" width="560" x="941" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-49" parent="0ZhfI66JjTu1734Dt9ed-46" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=50;strokeWidth=3;" value="opportunityTimeline&#xa;(LWC)" vertex="1">
+          <mxGeometry height="193" width="560" x="1691" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-50" parent="0ZhfI66JjTu1734Dt9ed-46" style="text;html=1;strokeColor=none;fillColor=#dae8fc;fontSize=50;fontStyle=0;align=center;verticalAlign=middle;" value="Perfiles: Comercial, Resp. Ventas Técnico Soporte, Administrador" vertex="1">
+          <mxGeometry height="105" width="2275" x="70" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-51" parent="0ZhfI66JjTu1734Dt9ed-46" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=50;strokeWidth=3;" value="Reports + Dashboards" vertex="1">
+          <mxGeometry height="140" width="875" x="206" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-52" parent="0ZhfI66JjTu1734Dt9ed-46" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=50;strokeWidth=3;" value="Knowledge Base (artículos FAQ)" vertex="1">
+          <mxGeometry height="140" width="875" x="1326" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-53" parent="0ZhfI66JjTu1734Dt9ed-45" style="swimlane;startSize=100;fillColor=#b3d1f7;strokeColor=#6c8ebf;fontSize=60;fontStyle=1;strokeWidth=5;" value="Experience Cloud (Portal de Clientes)" vertex="1">
+          <mxGeometry height="770" width="1960" x="451.5" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-54" parent="0ZhfI66JjTu1734Dt9ed-53" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=50;strokeWidth=3;" value="orderTrackingList&#xa;(LWC)" vertex="1">
+          <mxGeometry height="193" width="543" x="70" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-55" parent="0ZhfI66JjTu1734Dt9ed-53" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=50;strokeWidth=3;" value="orderTrackingDetail&#xa;(LWC)" vertex="1">
+          <mxGeometry height="193" width="543" x="683" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-56" parent="0ZhfI66JjTu1734Dt9ed-53" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=50;strokeWidth=3;" value="Knowledge Base&#xa;(artículos FAQ)" vertex="1">
+          <mxGeometry height="193" width="543" x="1295" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-57" parent="0ZhfI66JjTu1734Dt9ed-53" style="text;html=1;strokeColor=none;fillColor=#dae8fc;fontSize=50;fontStyle=0;align=center;verticalAlign=middle;strokeWidth=3;" value="Permission Set: IT_Solutions_Community" vertex="1">
+          <mxGeometry height="105" width="1785" x="70" y="403" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-58" parent="0ZhfI66JjTu1734Dt9ed-53" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=50;strokeWidth=3;" value="Crear Casos de soporte" vertex="1">
+          <mxGeometry height="140" width="770" x="70" y="543" as="geometry" />
+        </mxCell>
+        <mxCell id="0ZhfI66JjTu1734Dt9ed-59" parent="0ZhfI66JjTu1734Dt9ed-53" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=50;strokeWidth=3;" value="Consultar Pedidos y Envíos" vertex="1">
+          <mxGeometry height="140" width="945" x="910" y="543" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
