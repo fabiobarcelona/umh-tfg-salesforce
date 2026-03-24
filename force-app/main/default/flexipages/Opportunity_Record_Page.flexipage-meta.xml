@@ -218,6 +218,12 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
+                <componentName>opportunityTimeline</componentName>
+                <identifier>c_opportunityTimeline</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>label</name>
                     <value>Tabs</value>
