@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "d:/Salesforce/Projects/umh-tfg"
+    }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      "d:/Salesforce/Projects/umh-tfg"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "typescript"
+    ],
+    "eslint.options": {
+      "overrideConfigFile": "d:\\Salesforce\\Projects\\umh-tfg\\.eslintrc.json"
+    }
+  }
+}
